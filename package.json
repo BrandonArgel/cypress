@@ -3,23 +3,23 @@
 	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
+	"packageManager": "bun@1.3.4",
 	"scripts": {
-		"test": "cypress open",
-		"test:ui": "cypress open --e2e --browser electron",
-		"test:headless": "cypress run --quiet --record --key 99a265d5-5347-4fd9-a12f-025f14af3e64 --spec cypress/e2e/network-test.cy.js --browser electron",
-		"format": "prettier --write ."
+		"cy:run": "cypress run",
+		"cy:open": "cypress open"
 	},
 	"keywords": [],
 	"author": "Brandon Argel Verdeja Domínguez <BrandArgel@gmail.com> (https://brandonargel.com/)",
 	"license": "MIT",
 	"type": "module",
 	"devDependencies": {
-		"cypress": "^15.7.0",
+		"cypress": "^15.7.1",
 		"cypress-real-events": "^1.15.0",
-		"prettier": "^3.6.2",
-		"react": "^19.2.0",
-		"react-dom": "^19.2.0",
+		"prettier": "^3.7.4",
+		"react": "^19.2.1",
+		"react-dom": "^19.2.1",
+		"start-server-and-test": "^2.1.3",
 		"typescript": "^5.9.3",
-		"vite": "^7.2.4"
+		"vite": "^7.2.7"
 	}
 }
