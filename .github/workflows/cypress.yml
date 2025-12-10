@@ -9,21 +9,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Setup Bun Environment
+      # Set up Bun and install dependencies
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+        uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
       - name: Install dependencies with Bun
         run: bun install
 
-      - name: Run E2E Tests with Cypress Action
+      - name: Run E2E Tests
         uses: cypress-io/github-action@v6
         with:
-          build: bun run build 
-          start: '' 
-          command: bun run cy:run 
+          install: false
+          build: 'bun run build' 
+          start: ''
+          run-e2e: bun run cy:run 
 
       # Upload artifacts if tests fail
       - name: Upload Artifacts on Failure
