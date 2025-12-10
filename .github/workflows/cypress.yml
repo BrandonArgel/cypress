@@ -16,7 +16,7 @@ jobs:
           bun-version: latest
 
       - name: Install dependencies with Bun
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Run E2E Tests with Cypress Action
         uses: cypress-io/github-action@v6
