@@ -1,0 +1,25 @@
+{
+	"name": "cypress",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "cypress open",
+		"test:ui": "cypress open --e2e --browser electron",
+		"test:headless": "cypress run --quiet --record --key 99a265d5-5347-4fd9-a12f-025f14af3e64 --spec cypress/e2e/network-test.cy.js --browser electron",
+		"format": "prettier --write ."
+	},
+	"keywords": [],
+	"author": "Brandon Argel Verdeja Domínguez <BrandArgel@gmail.com> (https://brandonargel.com/)",
+	"license": "MIT",
+	"type": "module",
+	"devDependencies": {
+		"cypress": "^15.7.0",
+		"cypress-real-events": "^1.15.0",
+		"prettier": "^3.6.2",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"typescript": "^5.9.3",
+		"vite": "^7.2.4"
+	}
+}
